@@ -1,7 +1,7 @@
 const db = require("../db-config");
 
 function find() {
-  return db("users");
+  return db("users").select("users.id", "users.username");
 }
 
 function register(userData) {
